@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Björn Cersowsky</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal homepage of BCE." />
+    <meta
+      name="keywords"
+      content="bce, bcersows, homepage, frankfurt, webdev, softwareengineer"
+    />
+    <meta name="author" content="Björn Cersowsky" />
+    <meta name="copyright" content="Björn Cersowsky" />
+
+    <meta name="robots" content="follow" />
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">&lt;Björn Cersowsky/&gt;</a>
+          <!--<ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">About</a></li>
+          </ul>-->
+        </div>
+      </nav>
+    </div>
+
+    <main class="center-align">
+      <div id="main-text" class="stripe white">
+        <i class="material-icons large">format_quote</i> And our minds were
+        meant to sail.
+      </div>
+
+      <div id="app">{{message}}</div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">© 2020 bcersows</div>
+          <div class="col l4 offset-l2 s12">
+            Connect:
+            <ul>
+              <li>
+                <i class="material-icons tiny">contact_mail</i>
+                kontakt@bcersows.de
+              </li>
+              <li><i class="material-icons tiny">code</i> @bcersows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- initialize Vue -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

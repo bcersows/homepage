@@ -1,0 +1,30 @@
+:root {
+  --color-main: #bc3435;
+}
+
+nav,
+footer,
+.page-footer {
+  background-color: var(--color-main);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* actual page-specific stuff */
+#main-text {
+  font-size: 70px;
+
+  margin-top: 5%;
+}
