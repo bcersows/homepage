@@ -1,10 +1,6 @@
 //import { Logo } from './model/logo.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-  var elems = document.querySelectorAll(".parallax");
-  var options = {};
-  var instances = M.Parallax.init(elems, options);
-
   var app = new Vue({
     el: "#app",
     data: {
@@ -31,6 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
   });
+
+  console.log("Initialized Vue app.");
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".parallax");
+  var options = {};
+  var instances = M.Parallax.init(elems, options);
+  console.log("Initialized " + instances.length + " parallax instances.");
 });
 
 class Logo {
