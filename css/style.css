@@ -33,6 +33,15 @@ main {
   font-size: 60px;
 }
 
+.zoom {
+  display: inline-block;
+  width: auto;
+  transition: transform 0.2s;
+}
+.zoom:hover {
+  transform: scale(1.2);
+}
+
 /* actual page-specific stuff */
 .logo {
   width: 20px;
