@@ -27,6 +27,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
+  <!--https://github.com/lepture/github-cards-->
+
   <body>
     <div class="navbar-fixed">
       <nav>
@@ -39,15 +42,15 @@
       </nav>
     </div>
 
-    <main class="center-align">
-      <div class="parallax-container small">
+    <main id="app" class="center-align">
+      <div class="parallax-container">
         <div class="parallax"><img src="./assets/background_p.jpg" /></div>
       </div>
       <div class="section white">
         <i class="material-icons large">format_quote</i> And our minds were
         meant to sail.
       </div>
-      <div class="parallax-container small">
+      <div class="parallax-container">
         <div class="parallax"><img src="./assets/background_s.jpg" /></div>
       </div>
       <div class="section white">
@@ -65,19 +68,36 @@
           </div>
         </div>
       </div>
-      <div class="parallax-container small">
+      <div class="parallax-container">
         <div class="parallax"><img src="./assets/background_z.jpg" /></div>
       </div>
-      <div id="app">{{message}}</div>
+      <div class="section white">
+        <h3>Connect</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col s6 valign-items" v-for="link in links">
+              <img
+                class="logo"
+                v-bind:src="link.logoUrl"
+                v-bind:alt="link.altText"
+              />
+              <a v-bind:href="link.link" target="_blank">{{link.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax-container small">
+        <div class="parallax"><img src="./assets/background_b.jpg" /></div>
+      </div>
     </main>
 
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">© 2020 bcersows</div>
-          <div class="col l4 offset-l2 s12">
-            Connect:
-            <ul>
+          <div class="col s6">© 2020 bcersows</div>
+          <div class="col l4 offset-l2 s6">
+            <span class="hide-on-med-and-down">Contact:</span>
+            <ul class="no-margin">
               <li>
                 <i class="material-icons tiny">contact_mail</i>
 

@@ -3,13 +3,14 @@
   --color-inverted: WHITE;
 }
 
+/* overwrites, main page */
 nav,
 footer,
 .page-footer {
   background-color: var(--color-main);
 }
 footer a {
-    color: var(--color-inverted);
+  color: var(--color-inverted);
 }
 
 body {
@@ -19,11 +20,14 @@ body {
 }
 main {
   flex: 1 0 auto;
+}
 
-  /*background-image: url("../assets/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;*/
+/* helper classes */
+.no-margin {
+    margin: 0;
+}
+.valign-items>* {
+    vertical-align: middle;
 }
 
 /* actual page-specific stuff */
@@ -33,6 +37,13 @@ main {
   margin-top: 5%;
 }
 
+.logo {
+    width: 20px;
+}
+
 .parallax-container.small {
-    x-height: 300px;
-  }
+  height: 300px;
+}
+.parallax-container.xsmall {
+  height: 100px;
+}
