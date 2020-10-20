@@ -3,7 +3,7 @@ on:
     branches:    
       - master
       
-name: Build and Publish Averment
+name: build and publish homepage
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
