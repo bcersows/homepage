@@ -44,5 +44,5 @@ jobs:
           ftp-username: ${{ secrets.SFTP_USER }}
           ftp-password: ${{ secrets.SFTP_PWD }}
           known-hosts: ${{ secrets.SFTP_SERVER_KNOWN_HOST }}
-          local-dir: ./build
+          local-dir: ./build/
           git-ftp-args: --insecure
