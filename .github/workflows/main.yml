@@ -21,7 +21,10 @@ jobs:
       run: |
         npm install
         npm run build --if-present
-        
+    
+    - name: reset package-lock.json
+      run: git checkout package-lock.json
+
     - name: List output files
       run: ls -l ./build
       
