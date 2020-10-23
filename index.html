@@ -14,25 +14,85 @@
 
     <meta name="robots" content="follow" />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#bc3435">
-    <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#bc3435">
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/icon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/icon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/icon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/icon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/icon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/icon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/icon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/icon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/icon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#bc3435" />
+    <meta
+      name="msapplication-TileImage"
+      content="/assets/icon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#bc3435" />
 
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router"></script>
 
     <link
       rel="stylesheet"
@@ -44,108 +104,65 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- initialize Vue -->
+    <script src="./js/App.js" type="module"></script>
   </head>
 
   <!--https://github.com/lepture/github-cards-->
 
   <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">&lt;Björn Cersowsky/&gt;</a>
-          <!--<ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">About</a></li>
-          </ul>-->
+    <div id="app">
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <img class="img-logo" src="/icon.svg" alt="Homepage icon">
+            <router-link to="/" class="brand-logo"
+              >&lt;Björn Cersowsky/&gt;</router-link
+            >
+          </div>
+        </nav>
+      </div>
+
+      <!-- the main app view -->
+      <main class="center-align">
+        <router-view></router-view>
+      </main>
+
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col s6">
+              <div>© 2020 bcersows</div>
+              <div><router-link to = "/impressum">Impressum</router-link></div>
+            </div>
+            <div class="col l4 offset-l2 s6">
+              <span class="hide-on-med-and-down">Contact:</span>
+              <ul class="no-margin">
+                <li>
+                  <i class="material-icons tiny">contact_mail</i>
+
+                  <a
+                    href="mailto://&#107;&#111;&#110;&#116;&#097;&#107;&#116;&#064;&#098;&#099;&#101;&#114;&#115;&#111;&#119;&#115;&#046;&#100;&#101;"
+                    title="Send me a nice message! :)"
+                  >
+                    &#107;&#111;&#110;&#116;&#097;&#107;&#116;&#064;&#098;&#099;&#101;&#114;&#115;&#111;&#119;&#115;&#046;&#100;&#101;</a
+                  >
+                </li>
+                <li>
+                  <i class="material-icons tiny">code</i>
+                  <a
+                    href="https://github.com/bcersows"
+                    title="GitHub profile link"
+                    target="_blank"
+                    >@bcersows</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </nav>
+      </footer>
     </div>
-
-    <main id="app" class="center-align">
-      <div class="parallax-container">
-        <div class="parallax"><img src="./assets/background_p.jpg" /></div>
-      </div>
-      <div class="section white text-large">
-        <i class="material-icons large">format_quote</i> and our minds were
-        meant to sail
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img src="./assets/background_s.jpg" /></div>
-      </div>
-      <div class="section white">
-        <h3>About Me</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <div class="zoom">
-                <div><i class="material-icons">work</i></div>
-                <div>Software Engineer</div>
-              </div>
-            </div>
-            <div class="col l6 s12">
-              <div class="zoom">
-                <div><i class="material-icons">place</i></div>
-                <div>Frankfurt/Germany</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img src="./assets/background_z.jpg" /></div>
-      </div>
-      <div class="section white">
-        <h3>Connect</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col s6 valign-items" v-for="link in links">
-              <img
-                class="logo"
-                v-bind:src="link.logoUrl"
-                v-bind:alt="link.altText"
-              />
-              <a v-bind:href="link.link" target="_blank">{{link.name}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="parallax-container small">
-        <div class="parallax"><img src="./assets/background_b.jpg" /></div>
-      </div>
-    </main>
-
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col s6">© 2020 bcersows</div>
-          <div class="col l4 offset-l2 s6">
-            <span class="hide-on-med-and-down">Contact:</span>
-            <ul class="no-margin">
-              <li>
-                <i class="material-icons tiny">contact_mail</i>
-
-                <a
-                  href="mailto://&#107;&#111;&#110;&#116;&#097;&#107;&#116;&#064;&#098;&#099;&#101;&#114;&#115;&#111;&#119;&#115;&#046;&#100;&#101;"
-                  title="Send me a nice message! :)"
-                >
-                  &#107;&#111;&#110;&#116;&#097;&#107;&#116;&#064;&#098;&#099;&#101;&#114;&#115;&#111;&#119;&#115;&#046;&#100;&#101;</a
-                >
-              </li>
-              <li>
-                <i class="material-icons tiny">code</i>
-                <a
-                  href="https://github.com/bcersows"
-                  title="GitHub profile link"
-                  target="_blank"
-                  >@bcersows</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- initialize Vue -->
-    <script src="./js/app.js"></script>
   </body>
 </html>
