@@ -27,6 +27,13 @@ footer a {
 footer a:hover {
   color: var(--color-inverted-darker);
 }
+footer #version-info {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+
+  font-size: xx-small;
+}
 
 body,
 #app {
@@ -41,6 +48,9 @@ main {
 /* helper classes */
 .no-margin {
   margin: 0;
+}
+.relative {
+  position: relative;
 }
 .valign-items > * {
   vertical-align: middle;
@@ -61,6 +71,46 @@ main {
 /* actual page-specific stuff */
 #home .logo {
   width: 20px;
+}
+
+#home #about-me-image {
+  background-image: url("/assets/me.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  --about-me-image-size: 100px;
+
+  border: solid thin black;
+
+  position: absolute;
+  width: var(--about-me-image-size);
+  height: var(--about-me-image-size);
+  top: calc(var(--about-me-image-size) / -2);
+  left: calc(50% - (var(--about-me-image-size) / 2));
+  border-radius: 50%;
+
+  transition: border-color 0.5s;
+
+  z-index: 4;
+}
+#home #about-me-image:hover {
+  border-color: var(--color-main);
+}
+#home #about-me-image::before {
+  content: "";
+
+  --about-me-image-border-size: 4px;
+
+  border: solid thin black;
+  border-radius: 50%;
+  position: absolute;
+
+  height: calc(100% + (var(--about-me-image-border-size) * 2));
+  width: calc(100% + (var(--about-me-image-border-size) * 2));
+
+  left: calc(-1 * var(--about-me-image-border-size));
+  top: calc(-1 * var(--about-me-image-border-size));
+  z-index: -1;
 }
 
 #home .parallax-container.small {

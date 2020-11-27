@@ -1,0 +1,1 @@
+cmd /k python -m http.server

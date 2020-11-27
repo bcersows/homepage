@@ -51,7 +51,8 @@ export default {
 <div class="parallax-container">
   <div class="parallax"><img src="./assets/background_s.jpg" /></div>
 </div>
-<div class="section white">
+<div class="section white relative">
+  <div id="about-me-image"></div>
   <h3>About Me</h3>
   <div class="container">
     <div class="row">

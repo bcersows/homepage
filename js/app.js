@@ -22,3 +22,20 @@ var vm = new Vue({
   router,
 }).$mount(`#app`);
 console.log("Initialized Vue app.");
+
+// after DOM loaded, try to get the Git info and insert it
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/assets/gitinfo")
+    .then(function (response) {
+      if (response.ok) {
+        response.text().then(function (text) {
+          document.getElementById("version-info").textContent = text;
+        });
+      } else {
+        console.warn("Could not load the Git info: " + response.status + ": " + response.statusText);
+      }
+    })
+    .catch(function (err) {
+      console.error("Error when loading the Git info: " + err.message);
+    });
+});
