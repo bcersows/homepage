@@ -38,7 +38,7 @@ jobs:
         run: git status -uno --porcelain
 
       - name: store Git hash
-        run: $GITHUB_SHA > ./assets/gitinfo
+        run: "$GITHUB_SHA" > ./assets/gitinfo
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
