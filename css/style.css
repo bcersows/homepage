@@ -80,7 +80,7 @@ main {
 
   --about-me-image-size: 100px;
 
-  border: solid thin black;
+  border: solid thin WHITE;
 
   position: absolute;
   width: var(--about-me-image-size);
@@ -101,7 +101,7 @@ main {
 
   --about-me-image-border-size: 4px;
 
-  border: solid thin black;
+  border: solid thin WHITE;
   border-radius: 50%;
   position: absolute;
 
