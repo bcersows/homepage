@@ -1,5 +1,6 @@
 !build/
 assets/
+assets/gitinfo
 css/
 js/
 index.html

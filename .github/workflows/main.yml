@@ -12,24 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-#      - name: Use Node.js 12.x
-#        uses: actions/setup-node@v1
-#        with:
-#          node-version: "12.x"
-#
-#      - name: Build Project
-#        run: |
-#          npm install
-#          npm run build --if-present
-
       - name: reset package-lock.json
         run: git checkout package-lock.json
-
-#      - name: List output files
-#        run: ls -l ./build
-#
-#      - name: git status
-#        run: git status -uno --porcelain
 
       - name: Git Reset
         run: git reset --hard
@@ -38,7 +22,9 @@ jobs:
         run: git status -uno --porcelain
 
       - name: store Git hash
-        run: echo "$GITHUB_SHA" > ./assets/gitinfo
+        run: |
+          echo "$GITHUB_SHA" > ./assets/gitinfo
+          ls -l ./assets
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
