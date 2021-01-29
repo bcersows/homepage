@@ -1,4 +1,5 @@
 !build/
+api/
 assets/
 assets/gitinfo
 !assets/gitinfo

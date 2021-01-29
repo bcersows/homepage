@@ -10,6 +10,7 @@ export default {
     <p>with ❤ by @bcersows. Notable open-source frameworks:</p>
     <ul>
       <li><a href="https://vuejs.org/" target="_blank">VueJS</a></li>
+      <li><a href="https://github.com/miaolz123/vue-markdown" target="_blank">vue-markdown</a></li>
       <li>
         <a href="https://materializecss.com/" target="_blank">MaterializeCSS</a>
       </li>
