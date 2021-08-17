@@ -65,7 +65,7 @@ export default {
       <div class="col l6 s12">
         <div class="zoom">
           <div><i class="material-icons">place</i></div>
-          <div>Frankfurt/Germany</div>
+          <div>Munich/Germany</div>
         </div>
       </div>
     </div>
